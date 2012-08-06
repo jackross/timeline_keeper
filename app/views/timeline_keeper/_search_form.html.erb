@@ -1,0 +1,7 @@
+<%= form_tag events_path, :method => :get do %> 
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search Events", :name => nil %>
+    <%= link_to 'clear search', events_path if defined?(@events) %>
+  </p>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>Timelines</h1>
+
+<%#= render '/search_form' %>
+
+<ul class="thumbnails">
+  <% @timelines.each do |timeline| %>
+    <li class="span3">
+      <%= link_to(timeline, :class => :thumbnail) do %>
+        <% if timeline.media.blank? %>
+          <% if !timeline.events.where('media IS NOT NULL').limit(1).first.blank? %>
+            <%= image_tag timeline.events.where('media IS NOT NULL').limit(1).first.media %>
+          <% end -%>
+        <% else -%>
+          <%= image_tag timeline.media %>
+        <% end -%>
+        <h5><%= timeline.headline %></h5>
+        <p><%= timeline.caption %></p>
+      <% end -%>
+    </li>
+  <% end -%>
+</ul>
