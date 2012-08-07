@@ -6,7 +6,7 @@ module TimelineKeeper
     has_many :timeline_events
     has_many :timelines, :through => :timeline_events
 
-    validates :startDate, :presence => true
+    validates :startDate, :headline, :presence => true
 
     # ElasticSearch setup
     include Tire::Model::Search
@@ -42,10 +42,10 @@ module TimelineKeeper
       short_date(:endDate)
     end
 
-    def short_date(method)
-      date = send(method).to_date
+    def short_date(method)      
+      date = send(method)
       return nil if date.blank?
-      parts = date.to_s.split('-')
+      parts = date.to_date.to_s.split('-')
       data = parts[0]
       if parts[1] != '01' or (parts[1] == '01' && parts[2] != '01')
         data << "-#{parts[1]}"

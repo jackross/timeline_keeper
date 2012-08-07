@@ -11,3 +11,7 @@ two:
 three:
   timeline: one
   event: three
+
+four: 
+  timeline: two
+  event: minimal

@@ -21,8 +21,7 @@ two:
   caption: Event Two Caption
   thumbnail: http://2.bp.blogspot.com/-dxJbW0CG8Zs/TmkoMA5-cPI/AAAAAAAAAqw/fQpsz9GpFdo/s1600/voyage-dans-la-lune-1902-02-g.jpg
 
-three:
+minimal:
   headline: Event Three
   startDate: 2012-07-28
-  endDate: 2012-08-28
   text: Event Three Text
