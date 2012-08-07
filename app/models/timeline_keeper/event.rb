@@ -1,6 +1,7 @@
 module TimelineKeeper
   class Event < ActiveRecord::Base
-    attr_accessible :caption, :credit, :endDate, :headline, :media, :media_filename, :startDate, :text, :thumbnail
+    attr_accessible :caption, :credit, :endDate, :headline, :media, :media_filename, :startDate, :text, :thumbnail,
+      :timeline_ids
 
     has_many :timeline_events
     has_many :timelines, :through => :timeline_events
