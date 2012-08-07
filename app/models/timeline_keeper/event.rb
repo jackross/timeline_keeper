@@ -43,7 +43,7 @@ module TimelineKeeper
     end
 
     def short_date(method)
-      date = send(method)
+      date = send(method).to_date
       return nil if date.blank?
       parts = date.to_s.split('-')
       data = parts[0]
