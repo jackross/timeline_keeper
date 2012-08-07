@@ -4,30 +4,30 @@ timeline_keeper is a gem which packages ActiveAdmin, Timeline JS, and Twitter Bo
 
 # Install
 
-1. Add timekeeper_timeline to a Gemfile for a fresh Rails project:
+Add timekeeper_timeline to a Gemfile for a fresh Rails project and bundle install:
 
 ```
 gem 'timeline_keeper', :git => 'git://github.com/jronallo/timeline_keeper.git'
 bundle
 ```
 
-2. Run the install generator:
+Run the install generator:
 
 `rails g timeline_keeper:install`
 
-3. Run the migrations:
+Run the migrations:
 
 `rake db:migrate`
 
-4. Remove public/index.html
+Then: 
 
-5. Start Rails
-
-6. Visit the admin interface at http://localhost:3000/admin
-7. Enter the username/password of admin@example.com/password
-8. Add Timelines
-9. Add Events and add them to Timelines
-10. Visit http://localhost:3000
+- Remove public/index.html
+- Start Rails
+- Visit the admin interface at http://localhost:3000/admin
+- Enter the username/password of admin@example.com/password
+- Add Timelines
+- Add Events and add them to Timelines
+- Visit http://localhost:3000
 
 # Author
 
