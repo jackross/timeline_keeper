@@ -8,7 +8,7 @@
   <tbody>
     <% events.each do |event| %>
       <tr>
-        <td><%= event.start_date %><br><%= event.end_date %></td>
+        <td><%= event.startDate.to_date %><br><%= event.endDate.to_date %></td>
         <td>
           <% if !event.media.blank? %>
             <%= link_to external_media_url(event), :target => '_blank' do %>
