@@ -1,6 +1,33 @@
+# add timeline_keeper to Gemfile
+
+`gem 'timeline_keeper', :git => 'git://github.com/jronallo/timeline_keeper.git'`
+
+bundle install
+
+# install migrations
+
+```
+bundle exec rake timeline_keeper:install:migrations
+bundle exec rake db:migrate
+```
+
 # ActiveAdmin setup in host application
 
-Some setup you must do manually if you haven't yet:
+Add the following to `config/initializers/active_admin.rb`:
+
+```
+ActiveAdmin.setup do |config|
+  config.load_paths.delete_at(0)
+  config.load_paths << "#{TimelineKeeper::Engine.root}/app/admin/"
+  config.site_title = "Timeline Keeper"
+  config.authentication_method = :authenticate_admin_user!
+  config.current_user_method = :current_admin_user
+  config.logout_link_path = :destroy_admin_user_session_path  
+end
+
+```
+
+Some ActiveAdmin setup you must do manually if you haven't yet:
 
   1. Ensure you have defined default url options in your environments files. Here 
      is an example of default_url_options appropriate for a development environment 
@@ -15,19 +42,30 @@ Some setup you must do manually if you haven't yet:
 
        root :to => "home#index"
 
-  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
-     For example:
 
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+# routes
+
+Add the following to your routes:
+
+```
+  ActiveAdmin.routes(self)
+  devise_for :admin_users, :class_name => "TimelineKeeper::AdminUser"
+  mount TimelineKeeper::Engine => "/timeline_keeper"
+  root :to => 'TimelineKeeper::Timelines#index'
+```
+
 
 # assets
 1. change application.css to application.css.scss and add:
    `@import "timeline_keeper/application";`  
+   or include the following in application.css:
+   `*= require timeline_keeper/application`
 2. add this to application.js:
    `//= require timeline_keeper/application`
 
 # Add helper for linking to external media
+
+Add the following to `app/helpers/timeline_keeper_helper.rb`:
 
 ```
 module TimelineKeeperHelper
