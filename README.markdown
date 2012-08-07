@@ -29,6 +29,13 @@ Then:
 - Add Events and add them to Timelines
 - Visit http://localhost:3000
 
+# Thanks
+
+Thanks go to these projects which are included:
+- [Timeline JS](http://timeline.verite.co/)
+- [ActiveAdmin](http://activeadmin.info/)
+- [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+
 # Author
 
 Jason Ronallo
