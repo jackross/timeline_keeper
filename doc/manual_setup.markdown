@@ -38,3 +38,11 @@ module TimelineKeeperHelper
 
 end
 ```
+
+# ElasticSearch
+
+Install and start elasticsearch so that event indexing and searching works. Any event you add to your persistent database ought to be added to the elasticsearch index through a callback.
+
+If you already have events in your database and need to import everything in the search index again, you can run the following:
+
+`bundle exec rake environment tire:import CLASS='TimelineKeeper::Event'`
