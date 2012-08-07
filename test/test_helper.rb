@@ -17,6 +17,13 @@ end
 
 class ActiveSupport::TestCase
   fixtures :all
+
+  def admin_login
+    visit new_admin_user_session_path
+    fill_in "admin_user_email", :with => 'admin@example.com'
+    fill_in "Password", :with => 'password'
+    click_button "Sign in"
+  end
 end
 
 # FROM: database_cleaner

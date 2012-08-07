@@ -6,6 +6,8 @@ module TimelineKeeper
     has_many :timeline_events
     has_many :timelines, :through => :timeline_events
 
+    validates :startDate, :presence => true
+
     # ElasticSearch setup
     include Tire::Model::Search
     include Tire::Model::Callbacks
