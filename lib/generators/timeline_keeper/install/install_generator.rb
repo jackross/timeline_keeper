@@ -45,6 +45,7 @@ DESC
 
       def copy_helper
         template 'timeline_keeper_helper.rb', 'app/helpers/timeline_keeper_helper.rb'
+        say("You will want to update app/helpers/timeline_keeper_helper.rb", :yellow)
       end
       
     end
