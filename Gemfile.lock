@@ -5,7 +5,7 @@ PATH
       activeadmin
       bootstrap-sass
       jquery-rails
-      meta_search (>= 1.1.0.pre)
+      meta_search
       rails (~> 3.2.7)
       sass-rails
       tire

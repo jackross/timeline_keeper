@@ -7,19 +7,19 @@ require "timeline_keeper/version"
 Gem::Specification.new do |s|
   s.name        = "timeline_keeper"
   s.version     = TimelineKeeper::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TimelineKeeper."
-  s.description = "TODO: Description of TimelineKeeper."
+  s.authors     = ["Jason Ronallo"]
+  s.email       = ["jronallo@gmail.com"]
+  s.homepage    = "https://github.com/jronallo/timeline_keeper"
+  s.summary     = "timeline_keeper is a Rails engine for managing and displaying timelines."
+  s.description = "timeline_keeper packages ActiveAdmin, Timeline JS, and Twitter Bootstrap as a Rails engine for managing and displaying interactive timelines."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.7"
   s.add_dependency "jquery-rails"
   s.add_dependency 'activeadmin'
-  s.add_dependency 'meta_search', '>= 1.1.0.pre'
+  s.add_dependency 'meta_search'
   s.add_dependency 'tire'
   s.add_dependency 'bootstrap-sass'
   s.add_dependency 'sass-rails'
