@@ -1,8 +1,8 @@
 class CreateTimelineKeeperTimelineEvents < ActiveRecord::Migration
   def change
     create_table :timeline_keeper_timeline_events do |t|
-      t.references :timeline
-      t.references :event
+      t.integer  :timeline_id, :limit => 4, :null => false
+      t.integer  :event_id, :limit => 8, :null => false
 
       t.timestamps
     end
