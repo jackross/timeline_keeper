@@ -14,5 +14,7 @@ class CreateTimelineKeeperEvents < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    execute 'ALTER TABLE timeline_keeper_events ADD CONSTRAINT timeline_keeper_events_pkey PRIMARY KEY (id);'
   end
 end
