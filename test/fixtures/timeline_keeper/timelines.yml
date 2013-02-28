@@ -2,7 +2,7 @@
 
 one:
   headline: Timeline 1
-  startDate: 2012-01-28 13:32:44
+  start_at: 2012-01-28 13:32:44
   text: Timeline 1 text
   media: http://2.bp.blogspot.com/-dxJbW0CG8Zs/TmkoMA5-cPI/AAAAAAAAAqw/fQpsz9GpFdo/s1600/voyage-dans-la-lune-1902-02-g.jpg
   credit: Timeline 1 credit
@@ -10,7 +10,7 @@ one:
 
 two:
   headline: Timeline 2
-  startDate: 2011-02-28 13:32:44
+  start_at: 2011-02-28 13:32:44
   text: Timeline 1 text
   media: http://2.bp.blogspot.com/-dxJbW0CG8Zs/TmkoMA5-cPI/AAAAAAAAAqw/fQpsz9GpFdo/s1600/voyage-dans-la-lune-1902-02-g.jpg
   credit: MyString

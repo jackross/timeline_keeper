@@ -2,8 +2,8 @@
 
 one:
   headline: Event Headline
-  startDate: 2012-08-06 13:30:59
-  endDate: 2012-08-06 13:30:59
+  start_at: 2012-08-06 13:30:59
+  end_at: 2012-08-06 13:30:59
   text: Event text
   media: http://2.bp.blogspot.com/-dxJbW0CG8Zs/TmkoMA5-cPI/AAAAAAAAAqw/fQpsz9GpFdo/s1600/voyage-dans-la-lune-1902-02-g.jpg
   credit: credit
@@ -13,8 +13,8 @@ one:
 
 two:
   headline: Event Two
-  startDate: 2012-05-28 13:30:59
-  endDate: 2012-06-28 13:30:59
+  start_at: 2012-05-28 13:30:59
+  end_at: 2012-06-28 13:30:59
   text: Event Two Text
   media: http://2.bp.blogspot.com/-dxJbW0CG8Zs/TmkoMA5-cPI/AAAAAAAAAqw/fQpsz9GpFdo/s1600/voyage-dans-la-lune-1902-02-g.jpg 
   credit: Event Two Credit
@@ -23,5 +23,5 @@ two:
 
 minimal:
   headline: Event Three
-  startDate: 2012-07-28
+  start_at: 2012-07-28
   text: Event Three Text

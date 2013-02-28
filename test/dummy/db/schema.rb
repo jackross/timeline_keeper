@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(:version => 20120806173342) do
 
   create_table "timeline_keeper_events", :force => true do |t|
     t.string   "headline"
-    t.datetime "startDate"
-    t.datetime "endDate"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.text     "text"
     t.string   "media"
     t.string   "credit"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(:version => 20120806173342) do
 
   create_table "timeline_keeper_timelines", :force => true do |t|
     t.string   "headline"
-    t.datetime "startDate"
+    t.datetime "start_at"
     t.text     "text"
     t.string   "media"
     t.string   "credit"
