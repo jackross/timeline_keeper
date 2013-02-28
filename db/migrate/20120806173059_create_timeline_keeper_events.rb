@@ -1,6 +1,7 @@
 class CreateTimelineKeeperEvents < ActiveRecord::Migration
   def change
-    create_table :timeline_keeper_events do |t|
+    create_table :timeline_keeper_events, :id => false do |t|
+      t.integer  :id, :limit => 8, :null => false
       t.string :headline
       t.datetime :start_at
       t.datetime :end_at
