@@ -44,7 +44,7 @@ module TimelineKeeper
     end
 
     def end_date
-      end_at.strftime("%Y-%m-%d")
+      end_at ? end_at.strftime("%Y-%m-%d") : nil
       # short_date(:end_at)
     end
 
