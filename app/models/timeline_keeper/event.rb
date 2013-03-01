@@ -39,14 +39,17 @@ module TimelineKeeper
     # END ElasticSearch setup
 
     def start_date
-      short_date(:start_at)
+      start_at.strftime("%Y-%m-%d")
+      # short_date(:start_at)
     end
 
     def end_date
-      short_date(:end_at)
+      end_at.strftime("%Y-%m-%d")
+      # short_date(:end_at)
     end
 
-    def short_date(method)      
+    def short_date(method)
+
       date = send(method)
       return nil if date.blank?
       parts = date.to_date.to_s.split('-')
